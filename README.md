@@ -13,3 +13,6 @@
 `$ git clone https://github.com/sanpathsunggad/PHP-Tutorial`
 ### วิธี update code เป็น version ล่าสุด
 #### ใช้คำสั่ง `git pull`
+### font ที่ใช้งาน
+- Mali โดย คัดสรร ดีมาก
+`Download` <https://thaiwebfonts.lazywasabi.com/fonts/mali/>
