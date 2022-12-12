@@ -26,13 +26,6 @@
 </head>
 
 <body style="font-family:Mali;">
-
-    <?php
-    $price = 1000; // ราคาสินค้า
-    $discount = 5; // ส่วนลด 50%
-    $cal =  calDiscount($price, $discount); // คำนวณราคาส่วนลด
-    ?>
-
     <div class="container">
         <div class="row mt-5">
             <div class="col">
@@ -44,7 +37,7 @@
                         $price = 1500; // ราคาสินค้า
                         $discount = 5; // ส่วนลด 50%
                         $cal_discount =  calDiscount($price, $discount); // คำนวณราคาส่วนลด
-                        $total_discount = $price - $cal // ราคาสินค้าหลังหักส่วนลด
+                        $total_discount = $price - $cal_discount; // ราคาสินค้าหลังหักส่วนลด
                         ?>
                         <p class="card-text">
                         <h5>ราคาเต็มสินค้า (บาท) = <?php echo $price; ?> บาท</h5>
@@ -66,7 +59,8 @@
                             <?php
                             $price = 500; // ราคาสินค้า
                             $discount = 5; // ส่วนลด 50%
-                            showDiscount($price, $discount, $cal);//คำนวณราคาสินค้าหลังหักส่วนลด
+                            $cal_discount =  calDiscount($price, $discount); // คำนวณราคาส่วนลด
+                            showDiscount($price, $discount, $cal_discount); //คำนวณราคาสินค้าหลังหักส่วนลด
                             ?>
                         </p>
                     </div>
@@ -90,8 +84,8 @@
     {
         echo "<h5>ราคาเต็มสินค้า (บาท) = {$price} บาท</h5>";
         echo "<h5>ส่วนลด (%) = {$discount} %</h5>";
-        echo "<h5>ได้รับส่วนลด = {$cal_discount} บาท</h5>"; 
-        $total_discount = $price - $cal_discount; //คำนวณราคาสินค้าหลังหักส่วนลด
+        echo "<h5>ได้รับส่วนลด = {$cal_discount} บาท</h5>";
+        $total_discount = $price - $cal_discount;
         echo "<h5>ราคาสินค้าหลังหักส่วนลด = {$total_discount} บาท</h5>";
     }
     ?>
